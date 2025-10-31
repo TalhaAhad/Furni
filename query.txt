@@ -1,0 +1,23 @@
+User Table Query 
+
+CREATE TABLE `funiproject`.`register` (`user_id` INT(11) NOT NULL , `first_name` VARCHAR(255) NOT NULL , `last_name` VARCHAR(255) NOT NULL , `phone` INT(13) NOT NULL , `email` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , `roletype` VARCHAR(255) NOT NULL ) ENGINE = InnoDB;
+
+
+admin Query inserted
+
+INSERT INTO `register` (`user_id`, `first_name`, `last_name`, `phone`, `email`, `password`, `roletype`) VALUES (NULL, 'admin', 'dash', '113241324', 'admin@gmail.com', 'admin123', 'admin');
+
+
+
+CREATE TABLE product (
+    product_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    category_id INT(11) NOT NULL,
+    product_name VARCHAR(150) NOT NULL,
+    product_desc TEXT,
+    product_price DECIMAL(10,2) NOT NULL,
+    stock INT(11) DEFAULT 0,
+    product_img VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+);

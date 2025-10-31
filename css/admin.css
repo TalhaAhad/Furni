@@ -1,0 +1,164 @@
+/* ---------- Reset & Base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f7;
+      color: #333;
+    }
+
+    .logout {
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .logout:hover {
+      color: #ffb700;
+    }
+
+    /* ---------- Dashboard Section ---------- */
+    .dashboard {
+      padding: 2rem 3rem;
+    }
+
+    .dashboard h1 {
+      color: #2f5d50;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---------- Cards Grid ---------- */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      color: #2f5d50;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .card .number {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ffb700;
+      margin-top: 0.5rem;
+    }
+
+    /* ---------- Chart & Table Placeholder ---------- */
+    .content-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .chart-box, .recent-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .chart-box h2, .recent-box h2 {
+      color: #2f5d50;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .chart-placeholder {
+      height: 250px;
+      background: repeating-linear-gradient(
+        45deg,
+        #f0f0f0,
+        #f0f0f0 10px,
+        #e8e8e8 10px,
+        #e8e8e8 20px
+      );
+      border-radius: 8px;
+    }
+
+    .recent-list {
+      list-style: none;
+    }
+
+    .recent-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #eee;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .recent-list li span {
+      color: #2f5d50;
+      font-weight: 500;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background-color: #2f5d50;
+      color: white;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 992px) {
+      .content-row {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard {
+        padding: 1.5rem;
+      }
+    }
+
+
+    .chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 250px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.bar {
+  width: 12%;
+  background: linear-gradient(135deg, #2f5d50, #3f7a65);
+  border-radius: 8px 8px 0 0;
+  transition: 0.3s;
+}
+
+.bar:hover {
+  background: #ffb700;
+  transform: scaleY(1.05);
+}
